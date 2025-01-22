@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.foodwasteapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_individualRecipe"
+            app:destination="@id/individualRecipe" />
+        <action
+            android:id="@+id/action_navigation_home_to_sharePage"
+            app:destination="@id/sharePage" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_rewards"
+            app:destination="@id/navigation_tracker" />
+        <action
+            android:id="@+id/action_navigation_home_to_addItemToListFragment"
+            app:destination="@id/addItemToListFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_shoppingListFragment"
+            app:destination="@id/shoppingListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_list"
+        android:name="com.example.foodwasteapp.ui.itemsList.ItemsListFragment"
+        android:label="@string/title_list"
+        tools:layout="@layout/fragment_shopping_list" >
+        <action
+            android:id="@+id/action_navigation_list_to_addItemToListFragment"
+            app:destination="@id/addItemToListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_list"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_list_to_editListFragment"
+            app:destination="@id/editListFragment" />
+        <action
+            android:id="@+id/action_navigation_list_to_navigation_rewards"
+            app:destination="@id/navigation_tracker" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tracker"
+        android:name="com.example.foodwasteapp.ui.wasteTracker.WasteTrackerFragment"
+        android:label="@string/title_rewards"
+        tools:layout="@layout/fragment_rewards" />
+    <fragment
+        android:id="@+id/addItemToListFragment"
+        android:name="com.example.foodwasteapp.ui.itemsList.AddItemToListFragment"
+        android:label="AddItemToListFragment" >
+        <action
+            android:id="@+id/action_addItemToListFragment_to_navigation_list"
+            app:destination="@id/navigation_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/editListFragment"
+        android:name="com.example.foodwasteapp.ui.itemsList.EditListFragment"
+        android:label="EditListFragment" >
+        <action
+            android:id="@+id/action_editListFragment_to_navigation_list"
+            app:destination="@id/navigation_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/individualRecipe"
+        android:name="com.example.foodwasteapp.ui.recipe.IndividualRecipeFragment"
+        android:label="IndividualRecipe" >
+        <action
+            android:id="@+id/action_individualRecipe_self"
+            app:destination="@id/individualRecipe" />
+        <action
+            android:id="@+id/action_individualRecipe_to_recipeFragment"
+            app:destination="@id/navigation_recipes" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharePage"
+        android:name="com.example.foodwasteapp.ui.share.ShareFragment"
+        android:label="SharePage" >
+        <action
+            android:id="@+id/action_sharePage_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_recipes"
+        android:name="com.example.foodwasteapp.ui.recipe.recipeFragment"
+        android:label="RecipeFragment">
+        <action
+            android:id="@+id/action_recipeFragment_to_individualRecipe"
+            app:destination="@id/individualRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.foodwasteapp.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.example.foodwasteapp.ui.home.ShoppingListFragment"
+        android:label="ShoppingListFragment" >
+        <action
+            android:id="@+id/action_shoppingListFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

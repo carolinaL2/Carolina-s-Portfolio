@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/itemNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:text="Edit Food Item:"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/list"/>
+
+        <EditText
+            android:id="@+id/nameItemTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Item Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/green_round_background"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:padding="15dp" >
+
+        <!--  Quantity  -->
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_gas_meter_24"
+                android:id="@+id/quantityIcon"
+                android:background="@drawable/round_back_notifications"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Quantity"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/quantityIcon" />
+
+            <EditText
+                android:id="@+id/quantityTV"
+                android:layout_width="120dp"
+                android:text="2"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <!--  Storage  -->
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/storage_icon"
+                android:id="@+id/storageIcon"
+                android:background="@drawable/round_back_private_account"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Storage"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/storageIcon" />
+
+            <EditText
+                android:id="@+id/storageTV"
+                android:layout_width="120dp"
+                android:text="Fridge"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+                <!--  Expiry Date  -->
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/security_icon"
+                        android:id="@+id/reminderIcon"
+                        android:background="@drawable/round_back_night_mode"
+                        android:padding="12dp" />
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Expiry Date"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/reminderIcon" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/reminderTV"
+                    style="?android:spinnerStyle"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="openDatePicker"
+                    android:text="01 JAN 2024"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/saveItemEdit"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="Save"
+        android:backgroundTint="@color/primary"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
