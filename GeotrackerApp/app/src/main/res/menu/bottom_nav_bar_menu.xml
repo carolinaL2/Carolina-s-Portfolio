@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:title="@string/homeIcon" />
+    <item
+        android:id="@+id/locationMap"
+        android:icon="@drawable/location_reminder_icon"
+        android:title="@string/mapIcon" />
+    <item
+        android:id="@+id/reminders"
+        android:icon="@drawable/reminder_icon"
+        android:title="@string/remindersIcon" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/profile_icon"
+        android:title="@string/settingsIcon" />
+</menu>

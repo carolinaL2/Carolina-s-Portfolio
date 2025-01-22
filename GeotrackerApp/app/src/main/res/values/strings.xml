@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GPS_Practice</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="MAPS_API_KEY">AIzaSyCQvhXbvINHMeuBA2AyA-czAf1vCy4PdQw</string>
+    <string name="homeIcon">Home</string>
+    <string name="mapIcon">Map</string>
+    <string name="remindersIcon">Reminders</string>
+    <string name="settingsIcon">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="createReminderTxt">Create a Location Reminder</string>
+    <string name="viewReminderTxt">View Location Reminders</string>
+</resources>
